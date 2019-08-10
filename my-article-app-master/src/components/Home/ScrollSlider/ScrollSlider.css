@@ -1,0 +1,24 @@
+.card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all .5s ease-in;
+}
+.scroll-slider{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.right-arrow{
+    cursor: pointer;
+}
+.left-arrow{
+    cursor: pointer;    
+}

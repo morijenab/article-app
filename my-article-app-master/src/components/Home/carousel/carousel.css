@@ -1,0 +1,85 @@
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 380px;
+}
+.carousel-item{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.carousel-item .image{
+    width: 100%;
+    height: 100%;
+}
+.carousel-item.active .caption{
+    position: absolute;
+    top: 70%;
+    color: white;
+    left: 10%;
+    -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    
+}
+.carousel-item.active{
+	-webkit-animation: fade-out 1s ease-out both;
+	        animation: fade-out 1s ease-out both;
+}
+.left-arrow {
+  position: absolute;
+  left: 0;
+  top: 130px;
+  z-index: 10;
+}
+.right-arrow{
+  position: absolute;
+  right: 0;
+  top: 130px;
+  z-index: 10;
+}
+.fade-out {
+	-webkit-animation: fade-out 1s ease-out both;
+	        animation: fade-out 1s ease-out both;
+}
+ @-webkit-keyframes fade-out {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,18 @@
+{
+    "secretOrPrivateKey": "my-app_jwtPrivateKey",
+    "googleClientID" : "759988683715-d6usep8buin4oc8k6mc5akatgevdbq1a.apps.googleusercontent.com",
+    "googleClientSecret":"8JgOZPcCwLJx_obL8eS1a7vQ",
+    "authentication":{
+        "secret":"my-app_jwtPrivateKey",
+        "strategies":[
+            "google"
+        ],
+        "path":"/authentication",
+        "service": "users",
+        "google":{
+            "name":"google",
+            "clientID":"759988683715-d6usep8buin4oc8k6mc5akatgevdbq1a.apps.googleusercontent.com",
+            "clientSecret":"8JgOZPcCwLJx_obL8eS1a7vQ"
+        }
+    }
+}
