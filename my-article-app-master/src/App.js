@@ -1,44 +1,44 @@
 // import modules
-import React, { Component } from 'react';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-import {getCurrentUser} from './services/authService';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { getCurrentUser } from "./services/authService";
 
 // import components
-import LogIn from './components/Login'
-import Register from './components/Register'
-import Articles from './components/Articles';
-import CreateArticle from './components/CreateArticle';
-import AppBarDrawer from './components/AppBarDrawer';
-import LogOut from './components/LogOut';
-import UpdateArticle from './components/UpdateArticle';
-import ProtectedRoute from './components/ProtectedRoute';
-import Users from './components/Users';
-import Home from './components/Home/Home';
-import Article from './components/Article';
-import Categories from './components/Categories';
-import ArticleArchive from './components/ArticleArchive';
-import Ui from './components/Ui'; /* --------------- temporary component --------------- */
-
+import LogIn from "./components/Login";
+import Register from "./components/Register";
+import Articles from "./components/Articles";
+import CreateArticle from "./components/CreateArticle";
+import AppBarDrawer from "./components/AppBarDrawer";
+import LogOut from "./components/LogOut";
+import UpdateArticle from "./components/UpdateArticle";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Users from "./components/Users";
+import Home from "./components/Home/Home";
+import Article from "./components/Article";
+import Categories from "./components/Categories";
+import ArticleArchive from "./components/ArticleArchive";
+import Ui from "./components/Ui"; /* --------------- temporary component --------------- */
+import Teacher from "./components/Teacher";
 // import styles
-import './App.css';
+import "./App.css";
 
 export default class extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      user:{}
-    }
+    this.state = {
+      user: {}
+    };
   }
   componentDidMount() {
     const user = getCurrentUser();
-    this.setState({user});
+    this.setState({ user });
   }
-  render() { 
-    const {user} = this.state;
-    return ( 
+  render() {
+    const { user } = this.state;
+    return (
       <div className="App">
         <Router>
-          { window.location.pathname !== '/ui' && <AppBarDrawer user={user}/> }
+          {window.location.pathname !== "/ui" && <AppBarDrawer user={user} />}
           <Switch>
             <Route path="/articleArchive/:sort?" component={ArticleArchive} />
             <Route path="/categories" component={Categories} />
@@ -49,12 +49,14 @@ export default class extends Component {
             <Route path="/articles/update/:id" component={UpdateArticle} />
             <Route path="/articles/create/" component={CreateArticle} />
             <Route path="/articles" component={Articles} />
-            <ProtectedRoute path="/users" component={Users}/>
-            <Route path="/ui" component={Ui}/> {/* --------------- temporary component --------------- */}
+            <ProtectedRoute path="/users" component={Users} />
+            <Route path="/ui" component={Ui} />{" "}
+            {/* --------------- temporary component --------------- */}
+            <Route path="/teacher" component={Teacher} />
             <Route path="/" component={Home} />
           </Switch>
         </Router>
       </div>
-     );
+    );
   }
 }
