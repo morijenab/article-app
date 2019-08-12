@@ -4,7 +4,7 @@ import teacher from "../assets/_home/hashemi.png";
 import { flexbox } from "@material-ui/system";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import PHDimage from "../assets/_home/phd.png";
+import PHDimage from "../assets/_home/phd2.png";
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
@@ -81,7 +81,7 @@ const Teacher = () => {
           </Button>
         </div>
         <div>
-          <img src={PHDimage} alt="" />
+          <img src={PHDimage} alt="phd image" style={{ marginLeft: "10px" }} />
         </div>
       </div>
     </div>
