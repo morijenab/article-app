@@ -1,5 +1,9 @@
+// import modules
 import React, { Component } from 'react';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import {getCurrentUser} from './services/authService';
+
+// import components
 import LogIn from './components/Login'
 import Register from './components/Register'
 import Articles from './components/Articles';
@@ -13,15 +17,17 @@ import Home from './components/Home/Home';
 import Article from './components/Article';
 import Categories from './components/Categories';
 import ArticleArchive from './components/ArticleArchive';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import Ui from './components/Ui'; /* --------------- temporary component --------------- */
+
+// import styles
 import './App.css';
 
-class App extends Component {
+export default class extends Component {
   constructor(props) {
     super(props);
     this.state = { 
       user:{}
-     }
+    }
   }
   componentDidMount() {
     const user = getCurrentUser();
@@ -31,30 +37,24 @@ class App extends Component {
     const {user} = this.state;
     return ( 
       <div className="App">
-      <div>
         <Router>
-        <AppBarDrawer user={user}/>
-        <div>
-
-        </div>
-        <Switch>
-          <Route path="/articleArchive/:sort?" component={ArticleArchive} />
-          <Route path="/categories" component={Categories} />
-          <Route path="/article/:id" component={Article} />
-          <Route path="/login" component={LogIn} />
-          <Route path="/logout" component={LogOut} />
-          <Route path="/register" component={Register} />
-          <Route path="/articles/update/:id" component={UpdateArticle} />
-          <Route path="/articles/create/" component={CreateArticle} />
-          <Route path="/articles" component={Articles} />
-          <ProtectedRoute path="/users" component={Users}/>
-          <Route path="/" component={Home} />
-        </Switch>
+          { window.location.pathname !== '/ui' && <AppBarDrawer user={user}/> }
+          <Switch>
+            <Route path="/articleArchive/:sort?" component={ArticleArchive} />
+            <Route path="/categories" component={Categories} />
+            <Route path="/article/:id" component={Article} />
+            <Route path="/login" component={LogIn} />
+            <Route path="/logout" component={LogOut} />
+            <Route path="/register" component={Register} />
+            <Route path="/articles/update/:id" component={UpdateArticle} />
+            <Route path="/articles/create/" component={CreateArticle} />
+            <Route path="/articles" component={Articles} />
+            <ProtectedRoute path="/users" component={Users}/>
+            <Route path="/ui" component={Ui}/> {/* --------------- temporary component --------------- */}
+            <Route path="/" component={Home} />
+          </Switch>
         </Router>
       </div>
-      </div>
-  
      );
   }
 }
-export default App;

@@ -1,0 +1,310 @@
+
+/* --------------------------------------
+            primitive styles
+-------------------------------------- */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    lang: 'fa';
+    
+}
+
+body, html {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: 1670px;
+    max-width: 100%;
+}
+
+body,
+body:focus {
+    outline: none;
+    padding: 0px;
+}
+
+#root {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: 1670px;
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* --------------------------------------
+                header
+-------------------------------------- */
+
+.header {
+    min-height: 75px !important;
+    background: #fff !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 1 !important;
+    position: relative;
+}
+
+.headerContainer {
+    width: 100%;
+    min-width: 100%;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.header2 {
+    text-align: left;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* --------------------------------------
+                MainTop
+-------------------------------------- */
+  
+.MainTop {
+    display: flex !important;
+    max-width: 100% !important;
+    margin-top: 0px !important;
+}
+  
+.MainTop > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    max-height: 600px;
+    background: url("../assets/_home/mainBackGround.png") no-repeat;
+    background-size: 100%;
+    background-position: 0 -300px;
+    border-bottom: 5px solid #0058DC;
+}
+  
+#cardContainer {
+    position: absolute;
+    bottom: -105px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#cardContainer > div {
+    color: #707070;
+    font-size: 16px;
+    text-align: center;
+}
+
+.searchBox {
+    width: 500px !important;
+    position: absolute !important;
+    top: 40% !important;
+    left: 50% !important;
+    transform: translate(-50%) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 3px solid white !important;
+    border-radius: 70px !important;
+    padding: 15px 15px !important;
+}
+
+.card {
+    width: 140px !important;
+    height: 190px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    border-radius: 15px !important;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1) !important;
+    margin: 12px !important;
+}
+
+.input {
+    margin-left: 8px !important;
+    padding-right: 50px !important;
+    border-radius: 10px !important;
+    font-size: 22px !important;
+}
+
+.iconButton {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* --------------------------------------
+                list
+-------------------------------------- */
+
+.list {
+    min-width: 100%;
+}
+
+.itemSlide {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1), 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.itemSlide:hover {
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2), 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.listHead {
+    /* background-color: red; */
+    min-width: 100%;
+    padding: 0px 18% 0px 20%;
+} 
+
+.itemHead {
+    color: #515151;
+    font-size: 26px;
+}
+
+.itemHead > a {
+    position: relative;
+    text-decoration: none;
+    color: #0058DC;
+    font-size: 18px;
+}
+
+.itemHead > a::after,
+.itemHead > a::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: -30px;
+    transform: rotate(40deg);
+    height: 1px;
+    width: 13px;
+    background-color: #0058DC;
+}
+
+.itemHead > a::before {
+    top: 50%;
+    transform: rotate(-40deg);
+}
+
+#time, #views {
+    position: relative;
+    color: #878787;
+    margin: 0px 17px;
+    font-size: 14px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+#time > i, #views > i {
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 19px;
+    color: #0058DC;
+}
+
+.MuiRating-icon {
+    margin: 0px -2px;
+}
+
+/* --------------------------------------
+                banner
+-------------------------------------- */
+
+.banner {
+    position: relative;
+    background: url('../assets/_home/Group49.png') no-repeat;
+    background-size: 100% 100%;
+    background-color: #000;
+    height: 700px;
+    color: white;
+}
+
+.bannerImage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-right: 110px;
+}
+
+.bannerImage img {
+    height: 440px !important; 
+    width: 450px !important; 
+}
+
+.bannerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0px 110px;
+}
+
+.bannerText > h3 {
+    align-self: flex-start;
+    font-size: 30px;
+}
+
+.bannerTime {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    font-size: 50px;
+}
+
+.bannerTime > span {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.bannerPrice {
+    position: absolute;
+    bottom: 210px;
+    left: 37%;
+    font-size: 35px;
+}
+
+/* --------------------------------------
+                cards
+-------------------------------------- */
+
+.cardHead {
+    position: relative;
+}
+
+.cardHead::after,
+.cardHead::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 1px;
+    background-color: #0058DC;
+}
+
+.cardHead::after {
+    right: -100px;
+}
