@@ -139,6 +139,11 @@ a.article-link:visited {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  margin: auto;
+  border-top: 5px solid blue;
+  width: 60%;
+  max-width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .aboutPart3 {
@@ -152,6 +157,4 @@ a.article-link:visited {
   width: 40%;
   min-width: 40%;
   min-height: 355px;
-  border-top: 5px solid blue;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
