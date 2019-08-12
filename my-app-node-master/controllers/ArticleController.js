@@ -45,11 +45,17 @@ const createArticle = async(req, res) => {
     if(!article) res.status(404).send('Not Found');
     res.status(200).send(article);
   }
+  const deleteArticle = async (req, res) => {
+    const article = await Article.findByIdAndRemove(req.params.id);
+    if(!article) res.status(404).send('Not Found');
+    res.status(200).send(article);
+  }
 module.exports = {
     getArticles: getArticles,
     getLastArticles: getLastArticles,
     getArticlesByCategory: getArticlesByCategory,
     getArticleById: getArticleById,
     createArticle: createArticle,
-    updateArticle: updateArticle
+    updateArticle: updateArticle,
+    deleteArticle: deleteArticle
 }

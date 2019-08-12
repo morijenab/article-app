@@ -36,7 +36,6 @@ const auth = async (req, res) => {
     };
     return Joi.validate(req, schema);
   }
-  module.exports = router;
   
   module.exports = {
       auth: auth,

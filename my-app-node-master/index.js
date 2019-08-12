@@ -1,6 +1,6 @@
 const express = require('express');
 const articles = require('./routes/articles');
-const carousel = require('./routes/carousel');
+// const carousel = require('./routes/carousel');
 const categories = require('./routes/categories');
 const users = require('./routes/users');
 const comments = require('./routes/comments');
@@ -33,7 +33,7 @@ app.use(express.json());
 app.use('/api/articles',articles);
 app.use('/api/users',users);
 app.use('/api/auth',auth);
-app.use('/api/carousel',carousel);
+// app.use('/api/carousel',carousel);
 app.use('/api/categories',categories);
 app.use('/api/comments',comments);
 
