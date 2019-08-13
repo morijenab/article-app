@@ -1,3 +1,4 @@
+@import './fontiran.css';
 
 /* --------------------------------------
             primitive styles
@@ -11,17 +12,12 @@
     margin: 0px;
 }
 
-html {
-    lang: 'fa';
-    
-}
-
 body, html {
     min-height: 100%;
     height: 100%;
     width: 100%;
-    min-width: 1670px;
     max-width: 100%;
+    font-family: iranyekan !important;
 }
 
 body,
@@ -34,7 +30,7 @@ body:focus {
     min-height: 100%;
     height: 100%;
     width: 100%;
-    min-width: 1670px;
+    min-width: 1620px;
     max-width: 100%;
     margin: 0px;
     padding: 0px;
@@ -70,6 +66,89 @@ body:focus {
     justify-content: flex-end;
     align-items: center;
 }
+
+/* --------------------------------------
+                footer
+-------------------------------------- */
+
+.footerContainer {
+    min-width: 100%;
+    width: 100%;
+    height: 325px;
+    min-height: 325px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0px 150px 40px 150px;
+}
+
+.footerContent {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.footerContent dl {
+    min-width: 150px;
+    margin-left: 80px;
+}
+
+.footerContent dt {
+    font-size: 16px;
+    color: #0058DC;
+    margin-bottom: 15px;
+}
+
+.footerContent dd > a {
+    font-size: 15px;
+    color: #4B4B4B;
+    margin-bottom: 5px;
+}
+
+.footerContent .TeachInEdu {
+    margin-top: 30px;
+    color: #4B4B4B;
+    font-size: 13px;
+}
+
+.footerContent .TeachInEdu Button {
+    margin-top: 20px;
+}
+
+
+.footerContent .eNamad dd {
+    height: 150px;
+    width: 200px;
+    background: url('../assets/enamad-logo.png') no-repeat;
+}
+
+.footerBottom {
+    display: flex;
+    padding: 10px 10px 15px 10px;
+    font-size: 12px; 
+    width: 100%;
+    color: #0058DC;
+    border-top: 1px solid #0058DC;
+    border-bottom: 1px solid #0058DC;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* --------------------------- Home  -------------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
 
 /* --------------------------------------
                 MainTop
@@ -169,7 +248,7 @@ body:focus {
 .listHead {
     /* background-color: red; */
     min-width: 100%;
-    padding: 0px 18% 0px 20%;
+    padding: 0px 18% 0px 21%;
 } 
 
 .itemHead {
@@ -180,7 +259,7 @@ body:focus {
 .itemHead > a {
     position: relative;
     text-decoration: none;
-    color: #0058DC;
+    color: #0058DC !important;
     font-size: 18px;
 }
 
@@ -188,8 +267,8 @@ body:focus {
 .itemHead > a::before {
     content: "";
     position: absolute;
-    top: 80%;
-    left: -30px;
+    top: 70%;
+    left: -50px;
     transform: rotate(40deg);
     height: 1px;
     width: 13px;
@@ -197,7 +276,7 @@ body:focus {
 }
 
 .itemHead > a::before {
-    top: 50%;
+    top: 37%;
     transform: rotate(-40deg);
 }
 
@@ -280,8 +359,8 @@ body:focus {
 
 .bannerPrice {
     position: absolute;
-    bottom: 210px;
-    left: 37%;
+    bottom: 200px;
+    left: 35%;
     font-size: 35px;
 }
 
@@ -298,7 +377,7 @@ body:focus {
     content: "";
     position: absolute;
     top: 50%;
-    left: -100px;
+    left: -110px;
     transform: translateY(-50%);
     width: 100px;
     height: 1px;
@@ -306,5 +385,96 @@ body:focus {
 }
 
 .cardHead::after {
-    right: -100px;
+    right: -110px;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------- Teacher  ------------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+
+.About {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+}
+  
+.About > div {
+    position: relative;
+    width: 100%;
+    height: 472px;
+    min-height: 472;
+    max-height: 472px;
+    background: url("../assets/_home/about.png") no-repeat;
+    background-size: 100%;
+}
+  
+.teacherAvatar {
+    position: absolute !important;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-part2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+  
+.aboutDown {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: auto;
+    border-top: 5px solid blue;
+    width: 60%;
+    max-width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.aboutPart3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0;
+    width: 40%;
+    min-width: 40%;
+    min-height: 355px;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ---------------------- Media Queries  ---------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+@media screen and (max-width: 1000px) {
+
+    #root {
+        position: relative;
+        min-width: 0px;
+    }
+    
+    #root::before {
+        content: "small screen";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #root * {
+        display: none;
+    }
+
 }
