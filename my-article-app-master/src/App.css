@@ -5,10 +5,10 @@ body {
 }
 a {
   text-decoration: none;
-  color: white !important;
+  color: white;
 }
 a:visited {
-  color: white !important;
+  color: white;
 }
 .login-form {
   display: flex;
@@ -100,61 +100,4 @@ a:visited {
 }
 a.article-link:visited {
   color: black !important;
-}
-
-.About {
-  display: flex;
-  flex-flow: wrap;
-  width: 100%;
-  max-width: 100%;
-  justify-content: center;
-}
-
-.About > div {
-  position: relative;
-  width: 100%;
-  height: 472px;
-  min-height: 472;
-  max-height: 472px;
-
-  background: url("./assets/_home/about.png") no-repeat;
-  background-size: 100%;
-}
-
-.teacherAvatar {
-  position: absolute !important;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.about-part2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.aboutDown {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  margin: auto;
-  border-top: 5px solid blue;
-  width: 60%;
-  max-width: 60%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.aboutPart3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  justify-items: flex-start;
-  align-items: flex-start;
-  padding: 20px;
-  margin: 0;
-  width: 40%;
-  min-width: 40%;
-  min-height: 355px;
 }
